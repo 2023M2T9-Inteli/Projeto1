@@ -37,7 +37,7 @@
         </div>
     </div>
 
-            <!-- Exibição do botão de abrir o side bar e definição da função onClick -->
+        <!-- Exibição do botão de abrir o side bar e definição da função onClick -->
         <div class="barraMenu">
                 <button class="iconeMenu" onclick="abrirNav()"><i class="fa-sharp fa-solid fa-bars fa-2x"></i></button>
         </div>
@@ -148,15 +148,20 @@
             <div class="popup">
                 <div class="popup-close">x</div>
                 <div class="popup-content">
+                    <form name="form1" method="post" action="/sugerir"> 
                     <% for (const metadados of model) { %>
-                    <br>
                     <p>Tabela:</p>
                     <h4><%= metadados.TABELA %></h4>
-                    <input>
-                    <input>
-                    <input>
-                    <input>
-                    <a class="popup-link" href="#">Enviar</a>
+                        <p>Nome completo:</p>
+                        <input type="text" name="NOME" value="" placeholder="Ex: Jorge Gonçalves Costa" required> 
+                        <p>Data:</p>
+                        <input type="text" name="DATA" value="" placeholder="Ex: 11/05/2023" pattern="\d{2}/\d{2}/\d{4}" required> 
+                        <p>Campo que deseja alterar:</p>
+                        <input type="text" name="CAMPO" value="" placeholder="Ex: Tipo do Campo" required> 
+                        <p>Metadado atualizado:</p>
+                        <input type="text" name="ALTERACAO" value="" required> 
+                        <input class="popup-link" type="submit">
+                    </form>
                 </div>
             </div>
         </div>
