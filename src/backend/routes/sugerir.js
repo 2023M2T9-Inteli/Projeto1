@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
     db.all(sql, [],  err => {
        if (err) {
              throw err;
-       }	
+       }
        db.close(); // Fecha o banco dentro do callback
        res.end();
     });

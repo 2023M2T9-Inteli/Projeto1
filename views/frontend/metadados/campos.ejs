@@ -84,21 +84,26 @@
             <div class="tituloPagina">
                 <!-- Cada label abre uma aba diferente de metadados -->
                 <div class="mydict">
+                    <% for (const saidas of model) { %>
                     <div>
                         <label>
                             <input type="radio" name="radio" checked="">
                             <span>Campos</span>
                         </label>
                         <label>
+                            <a href="/busca/<%= permissao %>/saida/0/tabela?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>">
                             <input type="radio" name="radio">
                             <span>Tabela</span>
+                            </a>
                         </label>
                         <label>
+                            <a href="/busca/<%= permissao %>/saida/0/fonteDados?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>">
                             <input type="radio" name="radio">
                             <span>Fonte de Dados</span>
+                            </a>
                         </label>
-                        
                     </div>
+                    <% } %>
                 </div>
             </div>       
             <div id="divTabela">
@@ -251,6 +256,13 @@ function fecharNav() {
     document.getElementById("menuLateral").style.width = "0";
 }
 
+$('form[name="form1"]').submit(function(e){
+    e.preventDefault(); // Evita que o formulário seja enviado da maneira padrão
+    $.post($(this).attr('action'), $(this).serialize(), function(data){
+      // Aqui você pode lidar com a resposta do servidor após o POST
+      alert('Alteração sugerida com sucesso!');
+    });
+  });
 
 </script>
 <script src="busca.js"></script>

@@ -84,23 +84,28 @@
             <div class="tituloPagina">
                 <!-- Cada label abre uma aba diferente de metadados -->
                 <div class="mydict">
+                    <% for (const saidas of model) { %>
                     <div>
                         <label>
+                            <a href="/busca/<%= permissao %>/saida/0/campos?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>">
                             <input type="radio" name="radio">
                             <span>Campos</span>
+                            </a>
                         </label>
                         <label>
+                            <a href="/busca/<%= permissao %>/saida/0/tabela?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>">
                             <input type="radio" name="radio">
                             <span>Tabela</span>
+                            </a>
                         </label>
                         <label>
-                            <input type="radio" name="radio" checked="" >
+                            <input type="radio" name="radio" checked="">
                             <span>Fonte de Dados</span>
                         </label>
-                        
                     </div>
+                    <% } %>
                 </div>
-            </div>       
+            </div>  
             <div id="divTabela">
                 <!-- títulos da descrição das tabela -->
                 <table id="tabela">
@@ -191,37 +196,6 @@ popup.addEventListener('click', event => {
     
 })
 
-// function substituirInformacoes(tabelaId, cabecalhoId, novasInformacoes, novosCabecalhos) {
-//     var tabela = document.getElementById(tabelaId);
-//     var cabecalho = tabela.querySelector(`tr#${cabecalhoId}`);
-//     var linhas = tabela.getElementsByTagName('tr');
-
-//     // Remove as linhas existentes
-//     while (linhas.length > 1) {
-//         tabela.deleteRow(1);
-//     }
-
-//     // Remove as células do cabeçalho existentes
-//     while (cabecalho.cells.length > 0) {
-//         cabecalho.deleteCell(0);
-//     }
-
-//     // Adiciona as novas informações como células no cabeçalho
-//     for (var i = 0; i < novosCabecalhos.length; i++) {
-//         var novaCelulaCabecalho = document.createElement('th');
-//         novaCelulaCabecalho.textContent = novosCabecalhos[i];
-//         cabecalho.appendChild(novaCelulaCabecalho);
-//     }
-
-//     // Adiciona as novas informações como linhas na tabela
-//     for (var i = 0; i < novasInformacoes.length; i++) {
-//         var novaLinha = tabela.insertRow();
-//         for (var j = 0; j < novasInformacoes[i].length; j++) {
-//         var novaCelula = novaLinha.insertCell();
-//         novaCelula.textContent = novasInformacoes[i][j];
-//         }
-//     }
-// }
     /*Cria a barra de pesquisa, botão de busca e os filtros */
     const searchInput = document.getElementById('inputPesquisa');
     const searchBtn = document.getElementById('botaoPesquisa');
@@ -282,6 +256,13 @@ function fecharNav() {
     document.getElementById("menuLateral").style.width = "0";
 }
 
+$('form[name="form1"]').submit(function(e){
+    e.preventDefault(); // Evita que o formulário seja enviado da maneira padrão
+    $.post($(this).attr('action'), $(this).serialize(), function(data){
+      // Aqui você pode lidar com a resposta do servidor após o POST
+      alert('Alteração sugerida com sucesso!');
+    });
+  });
 
 </script>
 <script src="busca.js"></script>
