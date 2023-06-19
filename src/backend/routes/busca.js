@@ -50,7 +50,7 @@ router.post('/sugerir', (req, res) => {
    res.statusCode = 200;
    res.setHeader('Access-Control-Allow-Origin', '*'); 
    var db = new sqlite3.Database(DBPATH); // Abre o banco
-   sql = "INSERT INTO Alteracao (NOME, DATA, CAMPO, ALTERACAO) VALUES ('" + req.body.NOME + "','" + req.body.DATA + "','" + req.body.CAMPO + "', " + req.body.ALTERACAO + ")";
+   sql = "INSERT INTO Alteracao (NOME, DATA, CAMPO, ALTERACAO) VALUES ('" + req.body.nome + "','" + req.body.data + "','" + req.body.campo + "', " + req.body.alteracao + ")";
    console.log(sql);
    db.all(sql, [],  err => {
       if (err) {
@@ -65,7 +65,7 @@ router.get("/:permissao/sugestoes", (req, res) => {
    res.render("frontend/sugestoes/sugestoes", { permissao: req.params.permissao });
 });
 
-router.all("/:permissao/saida/:limit/metadados", (req, res) => {
+router.all("/:permissao/saida/:limit/campos", (req, res) => {
 
    let ordenar = req.query["ordenar"];
    let params;
@@ -83,13 +83,65 @@ router.all("/:permissao/saida/:limit/metadados", (req, res) => {
          if (err2) {
             throw err2;
          }
-         res.render("frontend/metadados/metadados", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/metadados`});
+         res.render("frontend/metadados/campos", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/campos`});
        });
    });
 
       
    });
 });
+
+router.all("/:permissao/saida/:limit/tabela", (req, res) => {
+
+   let ordenar = req.query["ordenar"];
+   let params;
+   let idTabela = req.query.ID_DADOS_TABELAS;
+   let tabela = req.query.TABELA;
+   const sql1 = `SELECT * FROM Catalogo_Dados_Tabelas WHERE ID_DADOS_TABELAS = '${idTabela}' `; 
+   console.log(sql1);
+   db.all(sql1, params,  (err1, rows1 ) => {
+      if (err1) {
+         throw err1;
+      }
+      var sql2 = `SELECT * FROM Catalogo_Dados_Tabelas WHERE TABELA = '${tabela}' `;
+      console.log(sql2);
+      db.all(sql2, [],  (err2, rows2 ) => {
+         if (err2) {
+            throw err2;
+         }
+         res.render("frontend/metadados/tabela", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/tabela`});
+       });
+   });
+
+      
+   });
+
+   router.all("/:permissao/saida/:limit/fonteDados", (req, res) => {
+
+      let ordenar = req.query["ordenar"];
+      let params;
+      let idTabela = req.query.ID_DADOS_TABELAS;
+      let tabela = req.query.TABELA;
+      const sql1 = `SELECT * FROM Catalogo_Dados_Tabelas WHERE ID_DADOS_TABELAS = '${idTabela}' `; 
+      console.log(sql1);
+      db.all(sql1, params,  (err1, rows1 ) => {
+         if (err1) {
+            throw err1;
+         }
+         var sql2 = `SELECT * FROM Catalogo_Dados_Conexoes WHERE TABELA = '${tabela}' `;
+         console.log(sql2);
+         db.all(sql2, [],  (err2, rows2 ) => {
+            if (err2) {
+               throw err2;
+            }
+            res.render("frontend/metadados/fonteDados", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/fonteDados`});
+          });
+      });
+   
+         
+      });
+   
+
 
 
 module.exports = router;

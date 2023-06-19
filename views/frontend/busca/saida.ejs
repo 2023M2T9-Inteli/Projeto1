@@ -79,7 +79,7 @@
     <% if (model.length > 0) { %>
         <% for (const saidas of model) { %>
             <div class="resultadoItem">
-                <a href="/busca/<%= permissao %>/saida/0/metadados?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>"><h2><%= saidas.TABELA %></h2></a>
+                <a href="/busca/<%= permissao %>/saida/0/campos?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>"><h2><%= saidas.TABELA %></h2></a>
                 <p><%= saidas.CONTEUDO_TABELA %></p>
             </div>
         <% } %>

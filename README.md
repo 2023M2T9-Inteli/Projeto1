@@ -18,8 +18,30 @@
 
 👤 [Gustavo Machado Esteves](https://www.linkedin.com/in/gustavo-machado-esteves-453b81248 )
 
+### Professores:
+
+🎓 [Claudio Fernando Andre](https://buscatextual.cnpq.br/buscatextual/visualizacv.do)
+
+🎓 [Flavio Marques Azevedo](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4760790U1&tokenCaptchar=03AL8dmw8-HL_AsA3f4S4pU6FlgEor9HhKULimeU6-WbfZxlMPUq45V2WYZluPrtbY7_I9NuzzytACvUCnnLZEFHYZL5GWtQyrdKVHfq_fyAPy-Xfn4658KeCAf5KCnUkQcd1OctvDXyvzYiJ160GJHWN3oEUwwwbZ4Zy8vX4XTj-TIBKF5M6UDaF1V3BS1bI4Pxxb8yKFXOAZIoe2GdcNzIYgKUrDob-HQGexpNLz3WhQQoX4eaLmAwxkovj2SVDMVuvhaanSMk98zqvn51w3lsvXq2LVnqhrX2yp8qx3uSc2AZFT4w5S7aym7f-1wUITWKapzq_e7W1NkTE2x12Z9s0kzOkQ5RvcCldF7vOng30-n1Nsg7vtCAXjOOKxFMiwo3ICPM78m3En4wvL3kVALbXlblPkfa5o_GKo4-eR4pFEn2Qo9JYXQe9f75YF1VjxpAsuumzAC3v5AOlmwdMkOwDhCgD3B2DjDMv3UYnyTeh2wmOUrPmQnZXm7sha3hJzhjLaXnvFARq5toN-lgpBSx1b0m2bJ3V7-nlVemtyAF7_cS_Gsccj1l8)
+
+🎓 [Henrique Mohallem Paiva](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4766528J1&tokenCaptchar=03AL8dmw9ybKcwxFPHFKeB1JAja1PEbRknpkJ-IGzS3DtKcGsCWO4SwRTrRS8t3wmOOPMqjzqsN29_FdyPlfXEcT_toDJMzHDdZe4DAHFeuHooDR0mv9taI3j3mOukdgiy1BOudQmAFBTYGUp2ZopNCtrDoIEKCqZmVgEFHQBDzAcWN5lK12uQgYVUngy9Lovc8EumuN0vTh4XaK1o0yUC-mERVGdvHCHnTSDSwLFLdpL0MERslD7XsFQzXNKGRC_td1AV3QGu2ruXYR-VL0gri4RGftH8B4Tjnw3Zz4fappQz-m_VzUZ81X_z2fNcatv05yBw72fGo5po6sAPe_HdsGlr8bX4wsxsK8pmw7CU0Mx8Me8iOX83LhoUppeFbi1CDnJUk0hoBvXutol9yT9dGRaqY-aB4zxWPJKov4HMRSeqgVZGVz4xg8KbDkGkBwaIJ8pS01NzC6LGVykAg93q2XpEh8_eF-ACIbRywT98QVtM561z4v2qi4tE3Q5IJJ5-QNwc3E6BPUP1I0sH5DHLWOhAgw0ibUr8h6YyiP5ztzotq-7zlTKWnBM)
+
+🎓 [Francisco Escobar](https://www.linkedin.com/in/francisco-escobar/)
+
+🎓 [Fatima Toledo](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K1126729U0&tokenCaptchar=03AL8dmw-kHmKL2lD-uJ63QObwNSQkEr41PF61yxyOP_URLiv3x0HygpLkQqJoAt7E-cevnJcdAHi9UGaxMOaWmoBdMz9Jwl7PJPQZhJF8Swpb-V0zyy5KtHZRj5EvFAC8qhXy92p0fJx43WCskj5VGLc9W7MiyuL4N_E8h79d78RnoRYXkdKCQcXOcSzXyXHIrXAecNX4b6-uS1K6vZZ6DabhbsMdKLe_uyH8u5tkObLB_LCZL3jZbpNd13IwkJeacB9-YpLnMaaWEnd7lQlnRRKA7XvZGNGd_7555O6TXYkKf_eZfTl6RGbsDtJAA9xA49FNQKSyBOM4nubtVMiAfftKqVNVL0wmIg4vNBrDHFMkV5K5JRa3-ksQ2-CbyO_fx3S_5Of6GuyRA395Kno_p-xnO5XveRu8uxEs5UV7-Eaiqu12DtcGSu4-9s7M0qWPVrcdiua4XlcrM040TDdhBWoWMvyyOFySJfn3gxyXLh3_RFo3n4dpt0goNkWJQZTI847yXvCynHOw3-e01LOuSq23jAdPK-ejQyPEhh_jdH_VOca6JXSGOF8)
+
+
+
 # 📝 Descrição
-O grupo WiseMeta está desenvolvendo uma aplicação web inovadora, uma ferramenta de busca em banco de metadados robusta e multifuncional. Esta ferramenta foi concebida para melhorar a usabilidade e eficiência do site de ferramenta de pesquisa de metadados atualmente utilizado pelo Banco Pan.
+O projeto do grupo WiseMeta consiste no desenvolvimento de uma aplicação web inovadora que visa aprimorar a usabilidade e eficiência do site de pesquisa de metadados atualmente utilizado pelo Banco Pan. A ferramenta de busca em banco de metadados proposta é robusta e multifuncional, trazendo uma abordagem inovadora para a organização e recuperação de informações.
+
+A principal função dessa aplicação é fornecer uma plataforma avançada para busca de metadados, permitindo que os usuários encontrem e acessem informações relevantes de maneira rápida e eficiente. Ela é projetada para atender às necessidades específicas do Banco Pan, fornecendo recursos poderosos de pesquisa que otimizam a experiência dos usuários.
+
+A ferramenta de busca em banco de metadados do WiseMeta utiliza algoritmos sofisticados e técnicas de indexação avançadas para indexar e catalogar dados de maneira precisa e abrangente. Isso permite uma recuperação eficiente de informações, facilitando a localização de dados relevantes para os usuários.
+
+Além disso, a aplicação web coniste em uma interface intuitiva e amigável, tornando a ferramenta acessível a todos os usuários, independentemente de seu nível de conhecimento técnico.
+
+No geral, o projeto do WiseMeta tem como objetivo fornecer ao Banco Pan uma ferramenta de busca em banco de metadados inovadora, robusta e multifuncional, capaz de melhorar significativamente a usabilidade e eficiência do atual site de pesquisa de metadados.
 
  **Principais funcionalidades:**
 
