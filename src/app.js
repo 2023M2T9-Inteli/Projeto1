@@ -86,6 +86,8 @@ app.use((req, res, next) => {
 
 app.use("/", require("./backend/routes/login"));
 app.use("/busca", require("./backend/routes/busca"));
+app.use("/favoritos", require("./backend/routes/favoritos"))
+
 
 // Depois de registrados todos os caminhos das rotas e seus tratadores, registramos
 // os tratadores que serão chamados caso nenhum dos tratadores anteriores tenha
