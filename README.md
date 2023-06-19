@@ -18,7 +18,7 @@
 
 👤 [Gustavo Machado Esteves](https://www.linkedin.com/in/gustavo-machado-esteves-453b81248 )
 
-## Professores:
+### Professores:
 
 🎓 [Claudio Fernando Andre](https://buscatextual.cnpq.br/buscatextual/visualizacv.do)
 
