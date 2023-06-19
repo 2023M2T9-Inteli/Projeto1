@@ -19,8 +19,11 @@
         <a href="javascript:void(0)" class="botaoFechar" onclick="fecharNav()">&times;</a>
         <h2 class="procura">O QUE VOCÊ PROCURA?</h2>
         <!-- guia da sidebar para o usuário acessar diversas páginas do site -->
+        <% if (permissao) { %>
+            <a href="/:permissao/favoritos/:limit">FAVORITOS</a>
+        <% } %>
         <a href="paginaDeFav.html">MEUS FAVORITOS</a>
-        <a href="https://www.google.com" target="_blank">DATA LITERACY</a>
+        <a href="https://www.google.com" target="_blank">MEUS FAVORITOS</a>
         <a href="https://www.google.com" target="_blank">DATA LAKE</a>
         <a href="https://www.google.com" target="_blank">SOLICITAR ACESSO AO DATA LAKE OU SDBX</a>
         <!-- quando o usuário é da governança, adiciona página de sugestão que é restrito para a governança de dados -->

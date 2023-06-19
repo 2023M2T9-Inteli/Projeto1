@@ -32,7 +32,9 @@
             <a href="javascript:void(0)" class="botaoFechar" onclick="fecharNav()">&times;</a>
             <h2 class="procura">O QUE VOCÊ PROCURA?</h2>
             <!-- guia da sidebar para o usuário acessar diversas páginas do site -->
-            <a href="paginaDeFav.html">MEUS FAVORITOS</a>
+            <% if (permissao) { %>
+                <a href="/favoritos/<%=permissao%>/favoritos/0">FAVORITOS</a>
+            <% } %>
             <a href="https://www.google.com" target="_blank">DATA LITERACY</a>
             <a href="https://www.google.com" target="_blank">DATA LAKE</a>
             <a href="https://www.google.com" target="_blank">SOLICITAR ACESSO AO DATA LAKE OU SDBX</a>
