@@ -148,7 +148,8 @@
             <div class="popup">
                 <div class="popup-close">x</div>
                 <div class="popup-content">
-                    <% for (const metadados of model) { %>
+                    <form name="form1" method="post" action="/sugerir"> 
+                        <% for (const metadados of model) { %>
                         <p>Tabela:</p>
                         <h4><%= metadados.TABELA %></h4>
                             <p>Nome completo:</p>
@@ -158,6 +159,7 @@
                             <p>Campo que deseja alterar:</p>
                             <input type="text" name="CAMPO" value="" placeholder="Ex: Tipo do Campo" required> 
                             <p>Metadado atualizado:</p>
+                            <input type="hidden" name="ID_TABELA" value="<%= metadados.ID_DADOS_TABELAS%>">
                             <input type="text" name="ALTERACAO" value="" required> 
                             <input class="popup-link" type="submit">
                         </form>

@@ -46,21 +46,6 @@ router.get("/:permissao/saida/:limit", (req, res) => {
       res.render("frontend/busca/saida", {limit: req.params.limit, permissao: req.params.permissao, model: rows, next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}`});
    });
 
-router.post('/sugerir', (req, res) => {
-   res.statusCode = 200;
-   res.setHeader('Access-Control-Allow-Origin', '*'); 
-   var db = new sqlite3.Database(DBPATH); // Abre o banco
-   sql = "INSERT INTO Alteracao (NOME, DATA, CAMPO, ALTERACAO) VALUES ('" + req.body.nome + "','" + req.body.data + "','" + req.body.campo + "', " + req.body.alteracao + ")";
-   console.log(sql);
-   db.all(sql, [],  err => {
-      if (err) {
-            throw err;
-      }	
-      db.close(); // Fecha o banco dentro do callback
-      res.end();
-   });
-});
-
 router.get("/:permissao/sugestoes", (req, res) => {
    res.render("frontend/sugestoes/sugestoes", { permissao: req.params.permissao });
 });

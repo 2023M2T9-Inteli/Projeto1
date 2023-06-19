@@ -1,3 +1,4 @@
+
 const path = require("path");
 
 // Importa as configurações do app
@@ -15,6 +16,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 
 /* Colocar toda a parte estática no frontend */
 app.use(express.static("views/frontend"));
@@ -86,7 +88,8 @@ app.use((req, res, next) => {
 
 app.use("/", require("./backend/routes/login"));
 app.use("/busca", require("./backend/routes/busca"));
-app.use("/favoritos", require("./backend/routes/favoritos"))
+app.use("/favoritos", require("./backend/routes/favoritos"));
+app.use("/sugerir", require("./backend/routes/sugerir"));
 
 // Depois de registrados todos os caminhos das rotas e seus tratadores, registramos
 // os tratadores que serão chamados caso nenhum dos tratadores anteriores tenha
@@ -120,21 +123,6 @@ app.use((err, req, res, next) => {
 	res.send("Erro " + status + " ocorrido: " + (err.message || err.toString()));
 });
 
-// app.post('/sugerir', urlencodedParser, (req, res) => {
-// 	res.statusCode = 200;
-// 	res.setHeader('Access-Control-Allow-Origin', '*'); 
-// 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-// 	sql = "INSERT INTO Alteracao (NOME, DATA, CAMPO, ALTERACAO) VALUES ('" + req.body.NOME + "','" + req.body.DATA + "','" + req.body.CAMPO + "', " + req.body.ALTERACAO + ")";
-// 	console.log(sql);
-// 	db.all(sql, [],  err => {
-// 		if (err) {
-// 		    throw err;
-// 		}	
-// 	});
-// 	res.write('<p>PRODUTO INSERIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
-// 	db.close(); // Fecha o banco
-// 	res.end();
-// });
 
 
 const server = app.listen(parseInt(process.env.PORT), process.env.IP, () => {
