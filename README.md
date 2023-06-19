@@ -28,12 +28,20 @@
 
 🎓 [Francisco Escobar](https://www.linkedin.com/in/francisco-escobar/)
 
-🎓 [Fatima ](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K1126729U0&tokenCaptchar=03AL8dmw-kHmKL2lD-uJ63QObwNSQkEr41PF61yxyOP_URLiv3x0HygpLkQqJoAt7E-cevnJcdAHi9UGaxMOaWmoBdMz9Jwl7PJPQZhJF8Swpb-V0zyy5KtHZRj5EvFAC8qhXy92p0fJx43WCskj5VGLc9W7MiyuL4N_E8h79d78RnoRYXkdKCQcXOcSzXyXHIrXAecNX4b6-uS1K6vZZ6DabhbsMdKLe_uyH8u5tkObLB_LCZL3jZbpNd13IwkJeacB9-YpLnMaaWEnd7lQlnRRKA7XvZGNGd_7555O6TXYkKf_eZfTl6RGbsDtJAA9xA49FNQKSyBOM4nubtVMiAfftKqVNVL0wmIg4vNBrDHFMkV5K5JRa3-ksQ2-CbyO_fx3S_5Of6GuyRA395Kno_p-xnO5XveRu8uxEs5UV7-Eaiqu12DtcGSu4-9s7M0qWPVrcdiua4XlcrM040TDdhBWoWMvyyOFySJfn3gxyXLh3_RFo3n4dpt0goNkWJQZTI847yXvCynHOw3-e01LOuSq23jAdPK-ejQyPEhh_jdH_VOca6JXSGOF8)
+🎓 [Fatima Toledo](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K1126729U0&tokenCaptchar=03AL8dmw-kHmKL2lD-uJ63QObwNSQkEr41PF61yxyOP_URLiv3x0HygpLkQqJoAt7E-cevnJcdAHi9UGaxMOaWmoBdMz9Jwl7PJPQZhJF8Swpb-V0zyy5KtHZRj5EvFAC8qhXy92p0fJx43WCskj5VGLc9W7MiyuL4N_E8h79d78RnoRYXkdKCQcXOcSzXyXHIrXAecNX4b6-uS1K6vZZ6DabhbsMdKLe_uyH8u5tkObLB_LCZL3jZbpNd13IwkJeacB9-YpLnMaaWEnd7lQlnRRKA7XvZGNGd_7555O6TXYkKf_eZfTl6RGbsDtJAA9xA49FNQKSyBOM4nubtVMiAfftKqVNVL0wmIg4vNBrDHFMkV5K5JRa3-ksQ2-CbyO_fx3S_5Of6GuyRA395Kno_p-xnO5XveRu8uxEs5UV7-Eaiqu12DtcGSu4-9s7M0qWPVrcdiua4XlcrM040TDdhBWoWMvyyOFySJfn3gxyXLh3_RFo3n4dpt0goNkWJQZTI847yXvCynHOw3-e01LOuSq23jAdPK-ejQyPEhh_jdH_VOca6JXSGOF8)
 
 
 
 # 📝 Descrição
-O grupo WiseMeta está desenvolvendo uma aplicação web inovadora, uma ferramenta de busca em banco de metadados robusta e multifuncional. Esta ferramenta foi concebida para melhorar a usabilidade e eficiência do site de ferramenta de pesquisa de metadados atualmente utilizado pelo Banco Pan.
+O projeto do grupo WiseMeta consiste no desenvolvimento de uma aplicação web inovadora que visa aprimorar a usabilidade e eficiência do site de pesquisa de metadados atualmente utilizado pelo Banco Pan. A ferramenta de busca em banco de metadados proposta é robusta e multifuncional, trazendo uma abordagem inovadora para a organização e recuperação de informações.
+
+A principal função dessa aplicação é fornecer uma plataforma avançada para busca de metadados, permitindo que os usuários encontrem e acessem informações relevantes de maneira rápida e eficiente. Ela é projetada para atender às necessidades específicas do Banco Pan, fornecendo recursos poderosos de pesquisa que otimizam a experiência dos usuários.
+
+A ferramenta de busca em banco de metadados do WiseMeta utiliza algoritmos sofisticados e técnicas de indexação avançadas para indexar e catalogar dados de maneira precisa e abrangente. Isso permite uma recuperação eficiente de informações, facilitando a localização de dados relevantes para os usuários.
+
+Além disso, a aplicação web coniste em uma interface intuitiva e amigável, tornando a ferramenta acessível a todos os usuários, independentemente de seu nível de conhecimento técnico.
+
+No geral, o projeto do WiseMeta tem como objetivo fornecer ao Banco Pan uma ferramenta de busca em banco de metadados inovadora, robusta e multifuncional, capaz de melhorar significativamente a usabilidade e eficiência do atual site de pesquisa de metadados.
 
  **Principais funcionalidades:**
 
