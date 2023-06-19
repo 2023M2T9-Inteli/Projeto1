@@ -8,7 +8,7 @@ const router = express.Router();
 var table;
 
 router.get("/:permissao/favoritos/:limit", (req, res) => {
-    let params;
+   let params;
    let limit = `limit ${parseInt(req.params.limit) * 10},10`
    let query = `LEFT JOIN Catalogo_Dados_Tabelas WHERE Favoritos.ID_TABELA = Catalogo_Dados_Tabelas.ID_DADOS_TABELAS ${limit}`;
 
