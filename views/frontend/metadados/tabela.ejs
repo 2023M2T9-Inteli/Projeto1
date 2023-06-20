@@ -10,8 +10,6 @@
     <link rel="stylesheet" type="text/css" href="/public/css/styleMetadados.css">
     <!-- Inclusão da biblioteca Jquery externo -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
-    <!-- Inclusão do arquivo Javascript externo -->
-    <script src="/js/script.js"></script>
 </head>
 <body>
     <%- include('../atalhos/sidebar')%>
@@ -137,96 +135,9 @@
         <img src="/public/images/logoBancoPanMin.svg" class="logoPanMenor" alt="Logo Banco Pan" id="imagem2">
         <img src="/public/images/logoMinPanDarkMode.svg" class="logoPanMenor" id="imagem4">
     </footer>
-        <!-- Atrela o script do JS ao HTML -->
-<script>
-
-/*PopUp*/
-const button = document.querySelector('.btnLapis')
-const popup = document.querySelector('.popup-wrapper')
-
-button.addEventListener('click', () => {
-    popup.style.display = 'block'
-})
-
-popup.addEventListener('click', event => {
-    const classNameOfClickedElement = event.target.classList[0]
-
-    if (classNameOfClickedElement === 'popup-close' || classNameOfClickedElement === 'popup-link' || classNameOfClickedElement === 'popup-wrapper') {
-        popup.style.display = 'none'
-    }
-    
-})
-
-    /*Cria a barra de pesquisa, botão de busca e os filtros */
-    const searchInput = document.getElementById('inputPesquisa');
-    const searchBtn = document.getElementById('botaoPesquisa');
-    var darkMode = false
-    /* adiciona o botão e a função dark mode, dependendo do modo claro e escuro muda as figuras */
-    $(document).ready(function() {
-        darkMode = localStorage.getItem("darkMode")==="true";
-        $('#imagem3').hide()
-        $('#imagem4').hide()
-        var checkbox = document.getElementById("bolabtn");
-        checkbox.checked = darkMode;
-
-        var element = document.body;
-        if (darkMode) {
-            $('#logo').hide()
-            $('#imagem3').show()
-            $('#imagem2').hide()
-            $('#imagem4').show()
-            element.classList.add("darkMode");
-        } else {
-            $('#logo').show()
-            $('#imagem3').hide()
-            $('#imagem2').show()
-            $('#imagem4').hide()
-        }
-    });
-
-    function funcaoDarkMode() {
-        var element = document.body;
-        if (darkMode === false) {
-            $('#logo').hide()
-            $('#imagem3').show()
-            $('#imagem2').hide()
-            $('#imagem4').show()
-            darkMode = true
-            console.log('darkMode', darkMode)
-            localStorage.setItem("darkMode", darkMode);
-            element.classList.add("darkMode");
-        } else {
-            $('#logo').show()
-            $('#imagem3').hide()
-            $('#imagem2').show()
-            $('#imagem4').hide()
-            darkMode = false
-            localStorage.setItem("darkMode", darkMode);
-            element.classList.remove("darkMode");
-        }
-    }
-
-/* Abre a overlay do menu lateral */ 
-function abrirNav() {
-    document.getElementById("menuLateral").style.width = "250px";
-    console.log('foi')
-}
-
-/* Fecha o overlay do menu lateral */
-function fecharNav() {
-    document.getElementById("menuLateral").style.width = "0";
-}
-
-$('form[name="form1"]').submit(function(e){
-    e.preventDefault(); // Evita que o formulário seja enviado da maneira padrão
-    $.post($(this).attr('action'), $(this).serialize(), function(data){
-      // Aqui você pode lidar com a resposta do servidor após o POST
-      alert('Alteração sugerida com sucesso!');
-    });
-  });
-
-</script>
+<!-- Atrela o script do JS ao HTML -->
 <script src="busca.js"></script>
+<script src="/public/js/script.js"></script>
 </body>
 </html>
 

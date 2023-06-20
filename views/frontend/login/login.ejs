@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/public/css/styleLogin.css">
     <!-- Inclui a biblioteca jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+    <!-- Inclusão do arquivo Javascript externo -->
+    <script src="/public/js/script.js"></script>
     <!-- Define o ícone da página -->
     <link rel="short icon" href="/public/images/123.png" type="image/x-icon">
     <!-- Define o título da página -->
@@ -42,21 +44,5 @@
         <div id="triangulo4Login" class="triangulo"></div>
         <div id="triangulo5Login" class="triangulo"></div>
     </div>
-  <script>
-
-    var darkMode = false
-    /* adiciona o botão e a função dark mode, dependendo do modo claro e escuro muda as figuras */
-    $(document).ready(function(){
-      
-       var checkbox = document.getElementById("bolabtn");
-       checkbox.checked = false;
-
-       var element = document.body;
-       element.classList.remove("darkMode");
-
-       localStorage.setItem("darkMode", false);
-       element.classList.remove("darkMode");
-    })
-  </script>
 </body>
 </html>
