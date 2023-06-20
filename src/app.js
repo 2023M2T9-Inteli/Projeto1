@@ -19,14 +19,12 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 /* Colocar toda a parte estática no frontend */
-app.use(express.static("views/frontend"));
-app.use(express.static("src/backend/routes"));
+app.use(express.static("views"));
+app.use(express.static("routes"));
 
-// Configura o diretório de onde tirar as views.
-app.set("views", path.join(__dirname, "../views"));
-// Define o view engine como o ejs.
-// https://ejs.co/
-app.set("view engine", "ejs");
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 // **********************************************************
 // Os middlewares são executados na ordem que são instalados!
@@ -34,7 +32,7 @@ app.set("view engine", "ejs");
 
 // Configura o middleware de arquivos estáticos para responder às
 // rotas iniciadas por "/public", servindo o conteúdo da pasta "../public".
-app.use("/public", express.static(path.join(__dirname, "../public"), {
+app.use("/public", express.static(path.join(__dirname, "public"), {
 	// Aqui estamos configurando o cache dos arquivos estáticos... Muito
 	// útil em ambientes de produção, mas deve-se ter cuidado durante a
 	// fase de desenvolvimento.
@@ -86,10 +84,10 @@ app.use((req, res, next) => {
 //
 // https://expressjs.com/en/guide/routing.html
 
-app.use("/", require("./backend/routes/login"));
-app.use("/busca", require("./backend/routes/busca"));
-app.use("/favoritos", require("./backend/routes/favoritos"));
-app.use("/sugerir", require("./backend/routes/sugerir"));
+app.use("/", require("./routes/login"));
+app.use("/busca", require("./routes/busca"));
+app.use("/favoritos", require("./routes/favoritos"));
+app.use("/sugerir", require("./routes/sugerir"));
 
 // Depois de registrados todos os caminhos das rotas e seus tratadores, registramos
 // os tratadores que serão chamados caso nenhum dos tratadores anteriores tenha

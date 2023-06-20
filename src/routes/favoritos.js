@@ -1,6 +1,6 @@
 //Criar 3 endpoints
 const express = require("express");
-const db = require('../../utils/db');
+const db = require('../utils/db');
 const parse = require("nodemon/lib/cli/parse");
 
 const router = express.Router();
@@ -22,9 +22,9 @@ router.get("/:permissao/favoritos/:limit", (req, res) => {
       }
       if(rows == null){
          
-      res.render("frontend/favoritos/favoritos");
+      res.render("favoritos/favoritos");
       }
-      res.render("frontend/favoritos/favoritos", {limit: req.params.limit, permissao: req.params.permissao, model: rows, next: `/favoritos/${(req.params.permissao)}/favoritos/${parseInt(req.params.limit) + 1}`, prev: `/favoritos/${(req.params.permissao)}/favoritos/${parseInt(req.params.limit) - 1}`});
+      res.render("favoritos/favoritos", {limit: req.params.limit, permissao: req.params.permissao, model: rows, next: `/favoritos/${(req.params.permissao)}/favoritos/${parseInt(req.params.limit) + 1}`, prev: `/favoritos/${(req.params.permissao)}/favoritos/${parseInt(req.params.limit) - 1}`});
 });})
 
 

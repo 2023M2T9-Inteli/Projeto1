@@ -1,24 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-/* Define a fonte usada no body como Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+/*Definição da fonte da body como Arial*/
 body {
     font-family: 'Montserrat', sans-serif;
 }
-/* Definição da posição da header, como os itens dentro dela vão se apresentar e seu tamanho */
-.header {
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+#erro, #index, #novoDado, #razao{
+    width: 97%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+header {
+    height: 22.5%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+}
+
+/*Ajuste da formatação da header, para deixá-la em diposição reta, com gap de 90 pixeis entre os componentes e com largura máxima da tela*/
+.cabeca {
     display: flex;
     flex-direction: row;
     gap: 90px;
     margin-top: 0px;
-    margin-left: 50px;
     width: 100%;
     margin: 0;
 }
-/* Define a cor do botçao do menu lateral como azul, tamanho como 40x40, sua posição na tela e também oculta o background e a borda do botão, além de mudar o cursor para pointer */
+/*Definição do menu de acesso rápido como 40x40 e alterações estéticas*/
 .iconeMenu {
     width: 40px;
     height: 40px;
-    margin-top: 24px;
-    margin-left: 10px;
+    margin-top: 35px;
+    margin-left: 2vw;
     background: transparent;
     border: none;
     color: #00A3FF;
@@ -26,19 +52,18 @@ body {
 }
 /*Ajustes no tamanho e posicionamento da logo do Panpedia, além de fazer com que o cursor passe a ser pointer */
 #logo {
-    position: absolute;
-    top: 5%;
-    left: 82%;
-    width: 15%;
+    position: relative;
+    top: -5%;
+    left: 30%;
+    width: 50%;
     cursor: pointer;
 }
 
-
 /*Ajustes no tamanho e posicionamento da div da pesquisa*/
 .pesquisaDiv {
-    position: absolute;
-    top: 10%;
-    left: 42%;
+    position: relative;
+    top: 8%;
+    left: 44vw;
     width: 70vw;
     transform: translate(-50%, -50%);
     padding: 1px;
@@ -90,8 +115,8 @@ body {
 /* Definições estéticas dos breadcrumbs */
 .caminho {
     gap: 20px;
-    position: absolute;
-    margin-top: 30px;
+    position: relative;
+    margin-top: 1vh;
     margin-left: 130px;
     display: flex;
     align-items: center;
@@ -110,7 +135,7 @@ a {
 .caminho a:hover { 
     cursor: pointer;
     transition: 0.4s;
-    color: #616161;
+    color: #00A3FF;
 }
 
 /* Definição de disposição da div que contém o botão do menu lateral */
@@ -130,7 +155,7 @@ a {
     list-style-type: none;
     background-color: #f2f2f2;
     border-radius: 15px;
-    padding: 10%;
+    padding-left: 10%;
 
 }
 
@@ -161,39 +186,34 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 15%;
+    width: 13%;
     height: 100vh;
     overflow: auto;
     margin-top: 12%;
     margin-left: 1%;
 }
 
-/* Exibe os resultados da pesquisa com largura de 75% da tela e define o posiciomaneto a direita dos elementos */
-.resultados {
-    margin-top: 60px;
-    float: right;
-    width: 75%;
-    padding: 10px;
+/* Outras media queries para tamanhos de tela específicos */
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 1366px) {
+}
+/* Define a posição e o tamanho da footer */
+footer{
+    width: 100%;
+    height: 30%;
+    position: relative;
 }
 
-/* Define uma borda preta abaixo dos resultados e uma transição de 0,5s no hover */
-.resultadoItem {
-    border-bottom: 1px solid #000;
-    padding: 10px 20px;
-    transition: background 0.5s;
-
-}
-/* Define a cor para azul quando o cursor passar por cima do item e muda o cursor para pointer */
-.resultadoItem:hover {
-    background: #d9d9d9;
-    cursor: pointer;
-    transition: 0.4s;
+.logoPanMenor {
+    width: 68px;
+    height: 77px;
+    position: relative;
+    margin-left: 94vw;
+    margin-top: 8vh;
+    z-index: 1;
 }
 
-.resultadoItem a:hover{
-    font-size: 18px;
-    transition: 0.4s;
-}
 /* Define a altura do menu lateral como 100% da tela, largura como 0 quando fechada, prioridade de sobreposição por meio do z-index, background preto e fazendo com que esteja escondida por padrão */
 .menuLateral {
     height: 100%;
@@ -212,14 +232,14 @@ a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 15px;
-    color: #ffffff;
+    color: #FFFFFF;
     display: block;
     transition: 0.3s;
     padding: 8px 8px;
 }
 /* Define a cor para branco quando o cursor passar por cima do item e muda o cursor para pointer */
 .menuLateral a:hover {
-    color: #f1f1f1;
+    color: #F1F1F1;
     cursor: pointer;
 }
 /* Oculta o menu lateral e seus elementos quando o botão de fechar for pressionado. */
@@ -230,65 +250,52 @@ a {
     margin-left: 50px;
     cursor: pointer;
 }
-
 .procura{
-    color: #ffffff;
+    color: #FFFFFF;
     padding: 8px 8px;
     font-size: 18px;
     text-align: left;
 }
-.paginacao {
-    display: flex;
+/* Estilos do popup */
+.popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
-
-#proxPag{
-    width: 300px;
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-size: 15px;
-    background-color: transparent;
-    color: #000;
+.popup h2 {
+    margin-top: 0;
+}
+.popup {
+    background-color: #414141;
+    color: #FFFFFF;
+    width: 400px;
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+.fecharPopup{
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #00C5FF;
+    color: #fff;
     border: none;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    justify-content: space-between;
-    
-}
-
-#proxPag:hover{
+    border-radius: 3px;
     cursor: pointer;
-    transition: .4s;
-    color: #696969;
 }
 
-
-#pagAnt{
-    width: 200px;
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-size: 15px;
-    background-color: transparent;
-    color: #000;
-    border: none;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    justify-content: space-between;
-    
-}
-
-#pagAnt:hover{
-    cursor: pointer;
-    transition: .4s;
-    color: #696969;
-}
-.paginacao {
-    display: flex;
-}
 .formatacao {
     padding: 25px;
     margin-left: 25%;
 }
 
+/*Dark Mode*/
 .alavanca {
     position: relative;
     display: inline-block;
@@ -347,16 +354,18 @@ a {
   .bola.botao:before {
     border-radius: 50%;
   }
-  .darkMode {
+
+.darkMode {
     background-color: #2a2c38;
     color: white;
 }
 #imagem3 {
-    position: absolute;
-    top: 5%;
-    left: 82%;
-    width: 15%;
+    position: relative;
+    margin-top: -5%;
+    left: 30%;
+    width: 50%;
     cursor: pointer;
+    background-color: #2a2c38;
 }
 .darkMode a {
     color: white;
@@ -365,39 +374,41 @@ a {
 .darkMode .resultadoItem:hover{
     background-color: #424558;
 }
-.darkMode .filtros {
+
+.darkMode header {
+    background-color: #2a2c38;
+}
+
+.sugestoesTabelas {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+
+.sugestao {
+    border-bottom: 1px solid #000;
+    padding: 10px 20px;
+    transition: background 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.sugestao:hover{
+    background: #d9d9d9;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.darkMode .sugestao:hover{
     background-color: #424558;
 }
-.darkMode .pesquisa {
-    background-color: #717171;
-    color: #000;
-    border: #717171;
-}
-.darkMode .pesquisaDiv i {
-    color: #424558;
-}
-.darkMode #inputPesquisa::placeholder {
-    text-align: left;
-    color: #000;
-    opacity: 0.9;
+
+.sugestao h2:hover {
+    font-size: 30px;
+    transition: 0.4s;
 }
 
-.darkMode #pagAnt {
-    color: #D9D9D9;
-}
-
-.darkMode #pagAnt:hover{
-    cursor: pointer;
-    transition: .4s;
-    color: #616161;
-}
-
-.darkMode #proxPag {
-    color: #D9D9D9;
-}
-
-.darkMode #proxPag:hover {
-    cursor: pointer;
-    transition: .4s;
-    color: #616161;
+.darkMode .pesquisaDiv {
+    margin-left: -1.5vw;
 }

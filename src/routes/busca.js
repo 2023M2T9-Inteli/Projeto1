@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require('../../utils/db');
+const db = require('../utils/db');
 const parse = require("nodemon/lib/cli/parse");
 
 const router = express.Router();
@@ -7,7 +7,7 @@ const router = express.Router();
 var table;
 
 router.all("/:permissao", (req, res) => {
-   res.render("frontend/busca/index", {permissao: req.params.permissao});
+   res.render("busca/index", {permissao: req.params.permissao});
 });
 
 
@@ -41,13 +41,13 @@ router.get("/:permissao/saida/:limit", (req, res) => {
       }
       if(rows == null){
          
-      res.render("frontend/busca/saida");
+      res.render("busca/saida");
       }
-      res.render("frontend/busca/saida", {limit: req.params.limit, permissao: req.params.permissao, model: rows, next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}`});
+      res.render("busca/saida", {limit: req.params.limit, permissao: req.params.permissao, model: rows, next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}`});
    });
 
 router.get("/:permissao/sugestoes", (req, res) => {
-   res.render("frontend/sugestoes/sugestoes", { permissao: req.params.permissao });
+   res.render("sugestoes/sugestoes", { permissao: req.params.permissao });
 });
 
 router.all("/:permissao/saida/:limit/campos", (req, res) => {
@@ -68,7 +68,7 @@ router.all("/:permissao/saida/:limit/campos", (req, res) => {
          if (err2) {
             throw err2;
          }
-         res.render("frontend/metadados/campos", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/campos`});
+         res.render("metadados/campos", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/campos`});
        });
    });
 
@@ -83,7 +83,7 @@ router.all("/:permissao/saida/:limit/tabela", (req, res) => {
    let idTabela = req.query.ID_DADOS_TABELAS;
    let tabela = req.query.TABELA;
    const sql1 = `SELECT * FROM Catalogo_Dados_Tabelas WHERE ID_DADOS_TABELAS = '${idTabela}' `; 
-   console.log(sql1);
+   console.log(sql1); 
    db.all(sql1, params,  (err1, rows1 ) => {
       if (err1) {
          throw err1;
@@ -94,7 +94,7 @@ router.all("/:permissao/saida/:limit/tabela", (req, res) => {
          if (err2) {
             throw err2;
          }
-         res.render("frontend/metadados/tabela", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/tabela`});
+         res.render("metadados/tabela", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/tabela`});
        });
    });
 
@@ -119,7 +119,7 @@ router.all("/:permissao/saida/:limit/tabela", (req, res) => {
             if (err2) {
                throw err2;
             }
-            res.render("frontend/metadados/fonteDados", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/fonteDados`});
+            res.render("metadados/fonteDados", {limit: req.params.limit, permissao: req.params.permissao, model: rows1, variaveis: rows2,next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}/fonteDados`});
           });
       });
    
