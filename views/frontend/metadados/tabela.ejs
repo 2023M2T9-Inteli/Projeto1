@@ -14,52 +14,13 @@
     <script src="../script.js"></script>
 </head>
 <body>
-    <!-- Exibição do menu lateral e definição da função de onClick, usada para exibir ou esconder o menu -->
-    <div id="menuLateral" class="menuLateral">
-        <a href="javascript:void(0)" class="botaoFechar" onclick="fecharNav()">&times;</a>
-        <h2 class="procura">O QUE VOCÊ PROCURA?</h2>
-        <!-- guia da sidebar para o usuário acessar diversas páginas do site -->
-        <% if (permissao) { %>
-            <a href="/favoritos/<%=permissao%>/favoritos/0">FAVORITOS</a>
-        <% } %>
-        <a href="https://www.google.com" target="_blank">DATA LITERACY</a>
-        <a href="https://www.google.com" target="_blank">DATA LAKE</a>
-        <a href="https://www.google.com" target="_blank">SOLICITAR ACESSO AO DATA LAKE OU SDBX</a>
-        <!-- quando o usuário é da governança, adiciona página de sugestão que é restrito para a governança de dados -->
-        <% if (permissao == "governanca") { %>
-            <a class="botaoAlteracoes" href="/busca/<%= permissao %>/sugestoes" id="pagSug">GOVERNANÇA DE DADOS</a>
-        <% } %>
-        <!-- adiciona botão dark mode -->
-        <h3 class="procura">Dark Mode</h3>
-        <div class="formatacao">
-            <label class="alavanca">
-                <input type="checkbox" id="bolabtn" onclick='funcaoDarkMode()'>
-                <span class="bola botao"></span>
-            </label>
-        </div>
-    </div>
-
+    <%- include('../atalhos/sidebar')%>
             <!-- Exibição do botão de abrir o side bar e definição da função onClick -->
         <div class="barraMenu">
                 <button class="iconeMenu" onclick="abrirNav()"><i class="fa-sharp fa-solid fa-bars fa-2x"></i></button>
         </div>
         <!-- Exibição da header com barra de pesquisa e logo do Panpedia -->
-            <div class="header">
-                <div class="pesquisaDiv">
-                    <form method="get" action="/busca/<%=permissao%>/saida/0">
-                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-                        <input type="text" name="pesquisa" id="inputBusca" required class="pesquisa" placeholder="Digite sua busca...">
-                        <button id="botaoPesquisa" type="submit">Buscar</button>
-                    </form>
-                </div>
-                <div>
-                    <!-- adiciona arquivos ejs a página -->
-                    <a href="/busca/<%=permissao %>"><img src="/public/images/panpedia_logo_adobe_express.svg" alt="Logo Do Panpedia" id="logo"></a>
-                    <a href="/busca/<%=permissao %>"><img src="/public/images/LogoPanpediaDarkmode.svg" alt="Logo Do Panpedia" id="imagem3"></a>
-                </div>
-            </div>
-        </div>
-    </div>
+             <%- include('../atalhos/header')%>
     <!-- Exibição dos breadcrumbs, demonstrando o caminho do usuário. -->
     <div class="caminho">
         <a href="/busca/<%=permissao%>">Página Inicial</a>
