@@ -67,6 +67,9 @@ Nosso objetivo é aumentar a produtividade dos colaboradores do Banco Pan, dispo
   |--> Tabela_Pan_Pedia.db
   |--> Tabela_Pan_Pedia.sql
 |--> documentos
+ |--> outros
+  | Guia_De_Estilos.pdf
+  | Guia_De_Estilos.docx
  | T9_G1_Web_application_document.pdf
  | T9_G1_Web_application_document.docx
 |--> node_modules
