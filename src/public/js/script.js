@@ -106,26 +106,16 @@ $('form[name="form1"]').submit(function(e){
     });
   });
 
-
-  // Seleciona todos os botões 'fechar' na página
-const closeButtons = document.querySelectorAll('.fechar');
-
-closeButtons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        const id = e.target.getAttribute('data-id');
-
-        fetch('/delete/' + id, {
-            method: 'DELETE'
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            location.reload(); // Recarrega a página após a exclusão para atualizar a lista de sugestões
-        })
-        .catch((error) => {
-            console.error('Error:', error);
+  $(document).ready(function() {
+    $(".fechar").click(function() {
+        var id = $(this).data('id'); // Pega o ID do botão clicado
+        var that = this; // Referência para o botão clicado
+        $.get("/analisado", {ID_ALTERACAO: id}, function(data, status) {
+            if (status === "success") {
+                $(that).parent().remove(); // Remove o card do botão clicado
+            } else {
+                alert("Erro ao remover a alteração!");
+            }
         });
     });
 });

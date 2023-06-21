@@ -1,6 +1,9 @@
 const express = require("express");
 const db = require('../utils/db');
 const parse = require("nodemon/lib/cli/parse");
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 
 const router = express.Router();
 
@@ -23,20 +26,20 @@ router.get("/:permissao/sugestoes", (req, res) => {
      res.render("sugestoes/sugestoes", { permissao: req.params.permissao, model: rows });
    });
  });
- 
- router.delete("/delete/:id", (req, res) => {
-   const sql = "DELETE FROM Alteracao WHERE ID_ALTERACAO = ?";
 
-   db.run(sql, req.params.id, (err) => {
-       if (err) {
-           console.error(err.message);
-           res.send("Erro: " + err.message);
-           return;
-       }
-
-       // Redirecionar de volta para a página de sugestões após a exclusão
-       res.redirect("/:permissao/sugestoes");
-   });
+// Exclui um registro (é o D do CRUD - Delete)
+router.get('/:permissao/analisado', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	sql = "DELETE FROM Alteracao WHERE ID_ALTERACAO='" + req.query.ID_ALTERACAO + "'";
+	console.log(sql);
+	db.all(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.redirect("/busca/"+req.params.permissao+"/sugestoes");
+		res.end();
+	});
 });
 
 router.get("/:permissao/saida/:limit", (req, res) => {

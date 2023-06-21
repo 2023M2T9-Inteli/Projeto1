@@ -11,6 +11,7 @@
     <!-- Inclusão da biblioteca Jquery externo -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
     <!-- Inclusão do arquivo Javascript externo -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- Exibição do menu lateral e definição da função de onClick, usada para exibir ou esconder o menu -->
@@ -38,7 +39,7 @@
                 <strong>Campo: </strong><%= alteracao.CAMPO %><br>
                 <strong>Alteração: </strong><%= alteracao.ALTERACAO %></p>
                 <input type="hidden" name="ID_ALTERACAO" value="<%= alteracao.ID_ALTERACAO%>">
-                <button class="fechar" data-id="<%= alteracao.ID_ALTERACAO %>">Fechar Alteração</button>
+                <a href="/busca/<%= permissao %>/analisado?ID_ALTERACAO=<%= alteracao.ID_ALTERACAO %>"><button class="fechar">Fechar Alteração</button></a>
                 </div>
         <% } %>
     <% } %>
@@ -47,7 +48,6 @@
 <!-- Atrela o script do JS ao HTML -->
 <script src="busca.js"></script>
 <script src="/public/js/script.js"></script>
-<script src="analisado.js"></script>
 </body>
 </html>
 
