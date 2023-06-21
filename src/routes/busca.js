@@ -10,6 +10,19 @@ router.all("/:permissao", (req, res) => {
    res.render("busca/index", {permissao: req.params.permissao});
 });
 
+router.get("/:permissao/sugestoes", (req, res) => {
+   const sql = "SELECT * FROM Alteracao ORDER BY DATA"; // Consulta SQL para selecionar e ordenar as informações da tabela "Alteracao" pela coluna "DATA"
+ 
+   db.all(sql, (err, rows) => {
+     if (err) {
+       console.error(err.message);
+       res.send("Erro: " + err.message);
+       return;
+     }
+ 
+     res.render("sugestoes/sugestoes", { permissao: req.params.permissao, model: rows });
+   });
+ });
 
 
 router.get("/:permissao/saida/:limit", (req, res) => {
@@ -45,10 +58,6 @@ router.get("/:permissao/saida/:limit", (req, res) => {
       }
       res.render("busca/saida", {limit: req.params.limit, permissao: req.params.permissao, model: rows, next: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) + 1}`, prev: `/busca/${(req.params.permissao)}/saida/${parseInt(req.params.limit) - 1}`});
    });
-
-router.get("/:permissao/sugestoes", (req, res) => {
-   res.render("sugestoes/sugestoes", { permissao: req.params.permissao });
-});
 
 router.all("/:permissao/saida/:limit/campos", (req, res) => {
 

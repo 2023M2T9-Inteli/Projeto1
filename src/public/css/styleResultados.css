@@ -53,7 +53,6 @@ body {
     border-radius: 100.5px;
    
 }
-/* Faz as seguintes alterações na barra de pesquisa: borda de 1 pixel, branca e solida; tamanho de 100% da largura e 55% da altura da div que a contém; remove o background da barra de pesquisa; define uma sombra abaixo da barra. */
 
 /* Definições estéticas na parte interna da caixa de texto, mudando alinhamento, cor e posição do texto */
 #inputBusca {
@@ -171,6 +170,7 @@ a {
 /* Exibe os resultados da pesquisa com largura de 75% da tela e define o posiciomaneto a direita dos elementos */
 .resultados {
     margin-top: 60px;
+    margin-right: 30px;
     float: right;
     width: 75%;
     padding: 10px;
