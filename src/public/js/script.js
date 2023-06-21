@@ -106,12 +106,26 @@ $('form[name="form1"]').submit(function(e){
     });
   });
 
-  // Alerta ao corrigir Sugestão de Alteração (página de sugestao) 
-$('form[name="form2"]').submit(function(e){
-    e.preventDefault(); // Evita que o formulário seja enviado da maneira padrão
-    $.post($(this).attr('action'), $(this).serialize(), function(data){
-      // Aqui você pode lidar com a resposta do servidor após o POST
-      alert('Alteração analisada com sucesso!');
-    });
-  });
 
+  // Seleciona todos os botões 'fechar' na página
+const closeButtons = document.querySelectorAll('.fechar');
+
+closeButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const id = e.target.getAttribute('data-id');
+
+        fetch('/delete/' + id, {
+            method: 'DELETE'
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            location.reload(); // Recarrega a página após a exclusão para atualizar a lista de sugestões
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+});

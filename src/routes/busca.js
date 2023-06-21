@@ -23,7 +23,21 @@ router.get("/:permissao/sugestoes", (req, res) => {
      res.render("sugestoes/sugestoes", { permissao: req.params.permissao, model: rows });
    });
  });
+ 
+ router.delete("/delete/:id", (req, res) => {
+   const sql = "DELETE FROM Alteracao WHERE ID_ALTERACAO = ?";
 
+   db.run(sql, req.params.id, (err) => {
+       if (err) {
+           console.error(err.message);
+           res.send("Erro: " + err.message);
+           return;
+       }
+
+       // Redirecionar de volta para a página de sugestões após a exclusão
+       res.redirect("/:permissao/sugestoes");
+   });
+});
 
 router.get("/:permissao/saida/:limit", (req, res) => {
 

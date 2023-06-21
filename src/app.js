@@ -2,7 +2,7 @@
 const path = require("path");
 
 // Importa as configurações do app
-require("dotenv").config({ encoding: "utf8", path: path.join(__dirname, "../env") });
+require("dotenv").config({ encoding: "utf8", path: path.join(__dirname, "./env") });
 
 // Configura o cache da view engine EJS, para armazenar as
 // 200 últimas páginas já processadas, por ordem de uso.
@@ -86,7 +86,6 @@ app.use((req, res, next) => {
 
 app.use("/", require("./routes/login"));
 app.use("/busca", require("./routes/busca"));
-app.use("/favoritos", require("./routes/favoritos"));
 app.use("/sugerir", require("./routes/sugerir"));
 
 // Depois de registrados todos os caminhos das rotas e seus tratadores, registramos
