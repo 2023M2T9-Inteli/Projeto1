@@ -28,19 +28,30 @@
         <p>></p>
         <a>Alterações sugeridas</a>
     </div>
+    <form name="form2" method="post" action="/analisado">
     <div id="alteracao">
+     
+
     <% if (model.length > 0) { %>
         <% for (const alteracao of model) { %>
                 <div class="card">
-                <p><%= alteracao.NOME %></p>
+                <p> <%= alteracao.TABELA %> - <%= alteracao.NOME %> - <%= alteracao.DATA %> <br>
+                    <p><%= alteracao.CAMPO %> - <%= alteracao.ALTERACAO %></p> <br>
+                    <input type="hidden" name="ID_ALTERACAO" value="<%= alteracao.ID_ALTERACAO%>">
+                    <input type="submit" value="FEITO" > </form>
+
+
+
                 </div>
         <% } %>
     <% } %>
+    
     </div>
 </body>
 <!-- Atrela o script do JS ao HTML -->
 <script src="busca.js"></script>
 <script src="/public/js/script.js"></script>
+<script src="analisado.js"></script>
 </body>
 </html>
 

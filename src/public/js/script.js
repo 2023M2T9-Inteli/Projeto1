@@ -105,3 +105,13 @@ $('form[name="form1"]').submit(function(e){
       alert('Alteração sugerida com sucesso!');
     });
   });
+
+  // Alerta ao corrigir Sugestão de Alteração (página de sugestao) 
+$('form[name="form2"]').submit(function(e){
+    e.preventDefault(); // Evita que o formulário seja enviado da maneira padrão
+    $.post($(this).attr('action'), $(this).serialize(), function(data){
+      // Aqui você pode lidar com a resposta do servidor após o POST
+      alert('Alteração analisada com sucesso!');
+    });
+  });
+

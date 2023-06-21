@@ -134,6 +134,8 @@ router.all("/:permissao/saida/:limit/tabela", (req, res) => {
    
          
       });
+
+      
    
 
 
