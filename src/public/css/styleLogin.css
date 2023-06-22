@@ -7,7 +7,7 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 }
-/*Definição da fonte da body como Montserrat*/
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,7 +17,7 @@ label {
     margin-bottom: 5px;
 }
 
-/* Página de login */
+
 .pesquisaItens {
     flex-direction: column;
     justify-content: center;

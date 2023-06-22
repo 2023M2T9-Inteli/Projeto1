@@ -14,19 +14,32 @@ router.all("/:permissao", (req, res) => {
 });
 
 router.get("/:permissao/sugestoes", (req, res) => {
-   const sql = "SELECT * FROM Alteracao ORDER BY DATA"; // Consulta SQL para selecionar e ordenar as informações da tabela "Alteracao" pela coluna "DATA"
- 
-   db.all(sql, (err, rows) => {
+   const sqlAlteracao = "SELECT * FROM Alteracao ORDER BY DATA"; // Consulta SQL para selecionar e ordenar as informações da tabela "Alteracao" pela coluna "DATA"
+   const sqlOwners = "SELECT DataOwner FROM Catalogo_Dados_Owners_Stewards"; // Consulta SQL para selecionar os DataOwners
+
+   db.all(sqlAlteracao, (err, rowsAlteracao) => {
      if (err) {
        console.error(err.message);
        res.send("Erro: " + err.message);
        return;
      }
- 
-     res.render("sugestoes/sugestoes", { permissao: req.params.permissao, model: rows });
+
+     db.all(sqlOwners, (err, rowsOwners) => {
+       if (err) {
+         console.error(err.message);
+         res.send("Erro: " + err.message);
+         return;
+       }
+
+       // Transforma o resultado em uma lista de nomes de owners
+       const owners = rowsOwners.map(row => row.DataOwner);
+
+       res.render("sugestoes/sugestoes", { permissao: req.params.permissao, model: rowsAlteracao, owners });
+     });
    });
  });
 
+ 
 // Exclui um registro (é o D do CRUD - Delete)
 router.get('/:permissao/analisado', urlencodedParser, (req, res) => {
 	res.statusCode = 200;

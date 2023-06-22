@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-/* Define a fonte usada no body como Montserrat */
+
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
-/* Definição da posição da header, como os itens dentro dela vão se apresentar e seu tamanho */
+
 .header {
     display: flex;
     flex-direction: row;
@@ -14,7 +14,7 @@ body {
     width: 100%;
     margin: 0;
 }
-/* Define a cor do botçao do menu lateral como azul, tamanho como 40x40, sua posição na tela e também oculta o background e a borda do botão, além de mudar o cursor para pointer */
+
 .iconeMenu {
     width: 40px;
     height: 40px;
@@ -25,7 +25,7 @@ body {
     color: #00A3FF;
     cursor: pointer;
 }
-/*Ajustes no tamanho e posicionamento da logo do Panpedia, além de fazer com que o cursor passe a ser pointer */
+
 #logo {
     position: absolute;
     top: 5%;
@@ -34,11 +34,7 @@ body {
     cursor: pointer;
 }
 
-#lblFav {
-    margin-left: 12rem;
-}
 
-/*Ajustes no tamanho e posicionamento da div da pesquisa*/
 .pesquisaDiv {
     position: absolute;
     top: 10%;
@@ -49,17 +45,14 @@ body {
     justify-content: space-between;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Adicionado para quebrar a linha quando necessário */
-
+    flex-wrap: wrap; 
     background: #FFFFFF;
     border: 1px solid #DCDCDC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100.5px;
    
 }
-/* Faz as seguintes alterações na barra de pesquisa: borda de 1 pixel, branca e solida; tamanho de 100% da largura e 55% da altura da div que a contém; remove o background da barra de pesquisa; define uma sombra abaixo da barra. */
 
-/* Definições estéticas na parte interna da caixa de texto, mudando alinhamento, cor e posição do texto */
 #inputBusca {
     color: rgb(64, 64, 64);
     text-align: left;
@@ -85,13 +78,12 @@ body {
     display: none;
 }
 
-  /* Estilos do texto de placeholder */
 #inputBusca ::placeholder {
     text-align: left;
     color: rgb(64, 64, 64);
     opacity: 0.5;
 }
-/* Definições estéticas dos breadcrumbs */
+
 .caminho {
     gap: 20px;
     position: absolute;
@@ -101,7 +93,7 @@ body {
     align-items: center;
     
 }
-/* Definições de fonte, botão e cursor */
+
 a { 
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -110,68 +102,19 @@ a {
     color: #000;
     cursor: pointer;
 }
-/* Faz com que o breadcrumb da página inicial fique azul quando o cursor passar por cima e muda o estilo do cursor para pointer */
+
 .caminho a:hover { 
     cursor: pointer;
     transition: 0.4s;
     color: #616161;
 }
 
-/* Definição de disposição da div que contém o botão do menu lateral */
 .barraMenu {
     display: flex;
     justify-content: space-between;
     gap: 60px;
-}
-/* Definição do posicionamento dos filtros a esquerda, com largura de 20%, espaçamento de 10px entre as laterais e cor branca. */
-.filtrarpor {
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 3%;
-}
+};
 
-.filtros {
-    list-style-type: none;
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    padding-left: 10%;
-
-}
-
-.filtros li {
-    padding: 10% 0;
-}
-
-.filtros li:hover {
-    color: #d9d9d9; /* Cor quando o mouse está sobre o item */
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.filtrarpor i {
-    font-size: 0.8em;
-    color: gray;
-    margin-right: 3%;
-
-}
-
-.filtros li i {
-    font-size: 0.8em;
-    color: gray;
-
-}
-
-.caixaFiltros {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 13%;
-    height: 100vh;
-    overflow: auto;
-    margin-top: 12%;
-    margin-left: 1%;
-}
-/* Definição estética do nome de cada aba de metadados (Campos, Tabela e Fonte de Dados) */
 :focus {
     outline: 0;
     border-color: #00C5FF;
@@ -227,7 +170,6 @@ a {
     border-radius: 0 .375em .375em 0;
   }
   
-/* Definição estética dos triângulos feitos por background, definindo transparência, tamanho, cor e posição */
 #triangulo1 {
     position: fixed;
     bottom: 0;
@@ -259,7 +201,7 @@ a {
     border-width: 0 0 24.5vh 10.5vw;
     border-color: transparent transparent rgba(0, 163, 255, 0.27) transparent;
 }
-/* Media queries para tornar o CSS reativo */
+
 @media screen and (max-width: 768px) {
     #triangulo1 {
         display: none;
@@ -271,12 +213,11 @@ a {
         display: none;
     }
 }
-/* Outras media queries para tamanhos de tela específicos */
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 1366px) {
 }
-/* Define a posição e o tamanho da footer */
+
 footer{
     width: 100%;
     height: 30%;
@@ -284,7 +225,6 @@ footer{
 }
 
 
-/* Define o tamanho e a posição do logo mini do Banco Pan */
 .logoPanMenor {
     width: 68px;
     height: 77px;
@@ -294,7 +234,6 @@ footer{
 
 }
 
-/* Define a altura do menu lateral como 100% da tela, largura como 0 quando fechada, prioridade de sobreposição por meio do z-index, background preto e fazendo com que esteja escondida por padrão */
 .menuLateral {
     height: 100%;
     width: 0;
@@ -307,7 +246,7 @@ footer{
     transition: 0.5s;
     padding-top: 60px;
 }
-/* Alterações nas letras contidas no menu lateral. */
+
 .menuLateral a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -317,12 +256,12 @@ footer{
     transition: 0.3s;
     padding: 8px 8px;
 }
-/* Define a cor para branco quando o cursor passar por cima do item e muda o cursor para pointer */
+
 .menuLateral a:hover {
     color: #F1F1F1;
     cursor: pointer;
 }
-/* Oculta o menu lateral e seus elementos quando o botão de fechar for pressionado. */
+
 .menuLateral .botaoFechar {
     position: absolute;
     top: 0;
@@ -341,7 +280,6 @@ footer{
 #tabelaContainer{
     overflow-y: hidden;
 }
-/* Definição do posicionamento dos filtros a esquerda, com largura de 20%, espaçamento de 10px entre as laterais e cor branca. */
 .filtros {
     float: left;
     padding: 10px;
@@ -351,7 +289,7 @@ footer{
     margin: 10px;
     border-radius: 5px;
 }
-/* Faz com que os itens dentro da lista de filtros fiquem azuis quando o cursor passar por cima, além de mudar o cursor para o modelo pointer */
+
 .filtros ul li:hover {
     color: #00A3FF;
     cursor: pointer;
@@ -368,7 +306,6 @@ footer{
     z-index: 999;
     background-color: #fff;
 }
-/* pagina de metadados a partir daqui */
 
 .metadadosItem {
     position: relative;
@@ -530,8 +467,7 @@ footer{
     margin-left: 10%;
     margin-bottom: 10%;
     margin-top: 1%;
-    border: 2px solid #DCDCDC; /* Define a borda com espessura de 2px e cor preta */
-    padding: 2%;
+    border: 2px solid #DCDCDC; 
     border-radius: 5px;
 }
 
@@ -541,24 +477,21 @@ footer{
 }
 
 #divTabela::-webkit-scrollbar {
-    width: 10px; /* Largura da barra de rolagem */
-    height: 10px; /* Altura da barra de rolagem */
+    width: 10px; 
+    height: 10px; 
 }
 
-/* Estiliza o track (trilha) da barra de rolagem */
 #divTabela::-webkit-scrollbar-track {
-    background-color: #F1F1F1; /* Cor de fundo do track */
+    background-color: #F1F1F1;
 }
 
-/* Estiliza o thumb (alça) da barra de rolagem */
 #divTabela::-webkit-scrollbar-thumb {
-    background-color: #DCDCDC; /* Cor do thumb */
-    border-radius: 5px; /* Raio de borda do thumb */
+    background-color: #DCDCDC;
+    border-radius: 5px; 
 }
 
-/* Estiliza o thumb quando estiver sendo hover */
 #divTabela::-webkit-scrollbar-thumb:hover {
-    background-color: #DCDCDC; /* Cor do thumb em hover */
+    background-color: #DCDCDC; 
 }
 
 th{
@@ -583,7 +516,6 @@ td{
     color: #000;
 }
 
-/* Definições de fonte, botão e cursor */
 .btnTab {
     font-family: 'Montserrat', sans-serif;
     background-color: transparent;
@@ -591,7 +523,7 @@ td{
     cursor: pointer;
     margin-left: 6vw;
 }
-/* Faz com que as letras fiquem azuis e o cursor mude para pointer quando o mouse passar em cima */
+
 .btnTab:hover{
     color: #00A3FF;
     cursor: pointer;
@@ -602,7 +534,6 @@ td{
     margin-left: 25%;
 }
 
-/*Dark Mode*/
 .alavanca {
     position: relative;
     display: inline-block;

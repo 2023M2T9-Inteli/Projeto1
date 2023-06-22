@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-/* Define a fonte usada no body como Montserrat */
 body {
     font-family: 'Montserrat', sans-serif;
 }
-/* Definição da posição da header, como os itens dentro dela vão se apresentar e seu tamanho */
+
 .header {
     display: flex;
     flex-direction: row;
@@ -13,7 +12,7 @@ body {
     width: 100%;
     margin: 0;
 }
-/* Define a cor do botçao do menu lateral como azul, tamanho como 40x40, sua posição na tela e também oculta o background e a borda do botão, além de mudar o cursor para pointer */
+
 .iconeMenu {
     width: 40px;
     height: 40px;
@@ -24,7 +23,7 @@ body {
     color: #00A3FF;
     cursor: pointer;
 }
-/*Ajustes no tamanho e posicionamento da logo do Panpedia, além de fazer com que o cursor passe a ser pointer */
+
 #logo {
     position: absolute;
     top: 5%;
@@ -34,7 +33,6 @@ body {
 }
 
 
-/*Ajustes no tamanho e posicionamento da div da pesquisa*/
 .pesquisaDiv {
     position: absolute;
     top: 10%;
@@ -46,7 +44,6 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap; /* Adicionado para quebrar a linha quando necessário */
-
     background: #FFFFFF;
     border: 1px solid #DCDCDC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -54,7 +51,6 @@ body {
    
 }
 
-/* Definições estéticas na parte interna da caixa de texto, mudando alinhamento, cor e posição do texto */
 #inputBusca {
     color: rgb(64, 64, 64);
     text-align: left;
@@ -73,20 +69,18 @@ body {
     margin-left: 20px;
     color: #D9D9D9;
     font-size: 25px;
-
 }
 
 #botaoPesquisa{
     display: none;
 }
 
-  /* Estilos do texto de placeholder */
 #inputBusca ::placeholder {
     text-align: left;
     color: rgb(64, 64, 64);
     opacity: 0.5;
 }
-/* Definições estéticas dos breadcrumbs */
+
 .caminho {
     gap: 20px;
     position: absolute;
@@ -94,9 +88,8 @@ body {
     margin-left: 130px;
     display: flex;
     align-items: center;
-    
 }
-/* Definições de fonte, botão e cursor */
+
 a { 
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -105,69 +98,19 @@ a {
     color: #000;
     cursor: pointer;
 }
-/* Faz com que o breadcrumb da página inicial fique azul quando o cursor passar por cima e muda o estilo do cursor para pointer */
+
 .caminho a:hover { 
     cursor: pointer;
     transition: 0.4s;
     color: #616161;
 }
 
-/* Definição de disposição da div que contém o botão do menu lateral */
 .barraMenu {
     display: flex;
     justify-content: space-between;
     gap: 60px;
 }
-/* Definição do posicionamento dos filtros a esquerda, com largura de 20%, espaçamento de 10px entre as laterais e cor branca. */
-.filtrarpor {
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 3%;
-}
 
-.filtros {
-    list-style-type: none;
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    padding: 10%;
-
-}
-
-.filtros li {
-    padding: 10% 0;
-}
-
-.filtros li:hover {
-    color: #d9d9d9; /* Cor quando o mouse está sobre o item */
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.filtrarpor i {
-    font-size: 0.8em;
-    color: gray;
-    margin-right: 3%;
-
-}
-
-.filtros li i {
-    font-size: 0.8em;
-    color: gray;
-
-}
-
-.caixaFiltros {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 15%;
-    height: 100vh;
-    overflow: auto;
-    margin-top: 12%;
-    margin-left: 1%;
-}
-
-/* Exibe os resultados da pesquisa com largura de 75% da tela e define o posiciomaneto a direita dos elementos */
 .resultados {
     margin-top: 60px;
     margin-left: 30px;
@@ -175,14 +118,13 @@ a {
     padding: 10px;
 }
 
-/* Define uma borda preta abaixo dos resultados e uma transição de 0,5s no hover */
 .resultadoItem {
     border-bottom: 1px solid #000;
     padding: 10px 20px;
     transition: background 0.5s;
 
 }
-/* Define a cor para azul quando o cursor passar por cima do item e muda o cursor para pointer */
+
 .resultadoItem:hover {
     background: #d9d9d9;
     cursor: pointer;
@@ -193,7 +135,7 @@ a {
     font-size: 18px;
     transition: 0.4s;
 }
-/* Define a altura do menu lateral como 100% da tela, largura como 0 quando fechada, prioridade de sobreposição por meio do z-index, background preto e fazendo com que esteja escondida por padrão */
+
 .menuLateral {
     height: 100%;
     width: 0;
@@ -206,7 +148,7 @@ a {
     transition: 0.5s;
     padding-top: 60px;
 }
-/* Alterações nas letras contidas no menu lateral. */
+
 .menuLateral a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -216,12 +158,12 @@ a {
     transition: 0.3s;
     padding: 8px 8px;
 }
-/* Define a cor para branco quando o cursor passar por cima do item e muda o cursor para pointer */
+
 .menuLateral a:hover {
     color: #f1f1f1;
     cursor: pointer;
 }
-/* Oculta o menu lateral e seus elementos quando o botão de fechar for pressionado. */
+
 .menuLateral .botaoFechar {
     position: absolute;
     top: 0;
@@ -236,9 +178,6 @@ a {
     font-size: 18px;
     text-align: left;
 }
-.paginacao {
-    display: flex;
-}
 
 #proxPag{
     width: 300px;
@@ -251,7 +190,6 @@ a {
     margin-top: 40px;
     margin-bottom: 40px;
     justify-content: space-between;
-    
 }
 
 #proxPag:hover{
@@ -272,7 +210,6 @@ a {
     margin-top: 40px;
     margin-bottom: 40px;
     justify-content: space-between;
-    
 }
 
 #pagAnt:hover{
@@ -365,9 +302,6 @@ a {
 .darkMode .resultadoItem:hover{
     background-color: #424558;
 }
-.darkMode .filtros {
-    background-color: #424558;
-}
 .darkMode .pesquisa {
     background-color: #717171;
     color: #000;
@@ -399,5 +333,5 @@ a {
 .darkMode #proxPag:hover {
     cursor: pointer;
     transition: .4s;
-    color: #616161;
+    color:#616161;
 }

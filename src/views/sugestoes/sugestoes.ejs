@@ -30,19 +30,24 @@
         <a>Alterações sugeridas</a>
     </div>
     <div id="alteracao">
-    <% if (model.length > 0) { %>
-        <% for (const alteracao of model) { %>
+        <% if (model.length > 0) { %>
+            <% for (const alteracao of model) { %>
                 <div class="card">
-                <p><strong> Tabela: </strong><%= alteracao.TABELA %><br>
-                <strong>Nome do funcionário: </strong><%= alteracao.NOME %><br>
-                <strong>Sugerido em: </strong><%= alteracao.DATA %><br>
-                <strong>Campo: </strong><%= alteracao.CAMPO %><br>
-                <strong>Alteração: </strong><%= alteracao.ALTERACAO %></p>
-                <input type="hidden" name="ID_ALTERACAO" value="<%= alteracao.ID_ALTERACAO%>">
-                <a href="/busca/<%= permissao %>/analisado?ID_ALTERACAO=<%= alteracao.ID_ALTERACAO %>"><button class="fechar">Fechar Alteração</button></a>
+                    <p><strong> Tabela: </strong><%= alteracao.TABELA %><br>
+                    <strong>Nome do funcionário: </strong><%= alteracao.NOME %><br>
+                    <strong>Sugerido em: </strong><%= alteracao.DATA %><br>
+                    <strong>Campo: </strong><%= alteracao.CAMPO %><br>
+                    <strong>Alteração: </strong><%= alteracao.ALTERACAO %></p>
+                    <input type="hidden" name="ID_ALTERACAO" value="<%= alteracao.ID_ALTERACAO%>">
+                    <% if (owners.includes(alteracao.NOME)) { %>
+                        <div class="coroa" title="Essa alteração foi sugerida por um owner">
+                            <i class="fa-sharp fa-solid fa-crown"></i>
+                        </div>
+                    <% } %>
+                    <a href="/busca/<%= permissao %>/analisado?ID_ALTERACAO=<%= alteracao.ID_ALTERACAO %>"><button class="fechar">Fechar Alteração</button></a>
                 </div>
+            <% } %>
         <% } %>
-    <% } %>
     </div>
 </body>
 <!-- Atrela o script do JS ao HTML -->
