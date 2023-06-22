@@ -115,7 +115,7 @@ Isso instalará todas as dependências definidas no arquivo package.json que sã
 ```
 npm start
 ```
-Agora você pode acessar a aplicação através do link http://localhost:1234/
+Agora você pode acessar a aplicação através do link https://nc5pps-3000.csb.app/
 O servidor está online.
 
 
