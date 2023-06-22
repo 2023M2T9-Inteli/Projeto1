@@ -121,18 +121,25 @@ O servidor está online.
 
 
 # 🗃 Histórico de lançamentos
-0.2.1 - 25/01/2022 <br>
-Atualização de documentos (código do módulo permanece inalterado). <br>
-0.2.0 - 15/01/2022 <br>
-Remove setDefaultXYZ() <br>
-Adiciona init() <br>
-0.1.1 - 11/01/2022 <br>
-Crash quando chama baz() <br>
-0.1.0 - 10/01/2022 <br>
-O primeiro lançamento adequado <br>
-Renomeia foo() para bar() <br>
-0.0.1 - 01/01/2022 <br>
-Trabalho em andamento <br>
+0.1.0 - 28/04/2023
+Atualização de documentos
+Organização das pastas
+Desenvolvimento de Wireframes
+0.2.0 - 12/05/2023
+Desenvolvimento dos endpoints
+Início do desenvolvimento do banco de dados
+Desenvolvimento dos protóripos
+0.3.0 - 26/05/2023
+Início do desenvolvimento do Front-End 
+Desenvolvimento do banco de dados
+0.4.0 - 07/06/2023
+Desenvolvimento do Front-End
+Correção de bugs
+Início da integração do Front-End e Back-end da aplicação
+0.5.0 - 21/06/2023
+Integração do Front-End e Back-end da aplicação
+Revisão do código e documentação
+Correção de bugs
 
 # 📋 Licença/License
 
