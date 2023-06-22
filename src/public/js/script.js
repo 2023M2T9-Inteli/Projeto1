@@ -106,6 +106,7 @@ $('form[name="form1"]').submit(function(e){
     });
   });
 
+
   $(document).ready(function() {
     $(".fechar").click(function() {
         var id = $(this).data('id'); // Pega o ID do botão clicado
