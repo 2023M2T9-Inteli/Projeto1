@@ -44,6 +44,7 @@ Além disso, a aplicação web coniste em uma interface intuitiva e amigável, t
 No geral, o projeto do WiseMeta tem como objetivo fornecer ao Banco Pan uma ferramenta de busca em banco de metadados inovadora, robusta e multifuncional, capaz de melhorar significativamente a usabilidade e eficiência do atual site de pesquisa de metadados.
 
  **Principais funcionalidades:**
+ 
 ➡️ Busca de tabelas com base no nome e na descrição
 
 ➡️ Gerenciamento de alterações sugeridas (para perfis administrativos)
