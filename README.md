@@ -44,6 +44,7 @@ Além disso, a aplicação web coniste em uma interface intuitiva e amigável, t
 No geral, o projeto do WiseMeta tem como objetivo fornecer ao Banco Pan uma ferramenta de busca em banco de metadados inovadora, robusta e multifuncional, capaz de melhorar significativamente a usabilidade e eficiência do atual site de pesquisa de metadados.
 
  **Principais funcionalidades:**
+➡️ Busca de tabelas com base no nome e na descrição
 
 ➡️ Gerenciamento de alterações sugeridas (para perfis administrativos)
 
@@ -55,44 +56,45 @@ Nosso objetivo é aumentar a produtividade dos colaboradores do Banco Pan, dispo
 
 # 📁 Estrutura de pastas
 ```
-|--> data
-  |--> Tabela_Pan_Pedia.db
-  |--> Tabela_Pan_Pedia.sql
+
 |--> documentos
- |--> outros
-  | Guia_De_Estilos.pdf
-  | Guia_De_Estilos.docx
- | T9_G1_Web_application_document.pdf
- | T9_G1_Web_application_document.docx
-|--> node_modules
-|--> public
-  |--> css
-  |--> images
+   |--> outros
+    | Guia_De_Estilos.pdf
+    | Guia_De_Estilos.docx
+   | T9_G1_Web_application_document.pdf
+   | T9_G1_Web_application_document.docx
 |--> src
- |--> backend
- |--> utils
- | app.js 
-|--> views
- |--> frontend
-| env.txt
+  |--> data
+    | Tabela_Pan_Pedia.db
+    | Tabela_Pan_Pedia.db.sql
+  |--> public
+    |--> css
+    |--> images
+    |--> js
+  |--> routes
+  |--> utils
+  |--> views
+  | app.js 
+  | env.txt
 | LICENCE.txt
-| package.json
-| package-lock.json
 | README.md
 ```
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
-**data:** pasta que armazena o banco de dados em dois formatos: .db e .sql)
-
 **documentos:** aqui estarão todos os documentos do projeto. Há também uma pasta denominada outros onde estão presentes aqueles documentos complementares ao web application document.
 
-**public:** contém todas as imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins) e uma pasta com todos os arquivos  de estilos css.
+**src:** nesta pasta encontra-se todo o código fonte do sistema (existem subpastas que contêm o código tando do lado do servidor quanto do cliente, além do banco de dados utilizado).
 
-**src:** nesta pasta encontra-se todo o código fonte do sistema do lado do servidor (existem duas subpastas backend e utils que contêm, respectivamente, o código do servidor e o código que encontra o banco de dados utilizado).
+**data:** pasta que armazena o banco de dados em dois formatos: .db e .sql
+
+**public:** contém todas as imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins), uma pasta com todos os arquivos  de estilos css e uma com o arquivo javascript do lado do cliente.
+
+**routes:** contém os arquivos node.js, que criam as rotas do servidor e a comunicação com o banco de dados.
+
+**utils:** conecta ao banco de dados.
 
 **views:** nesta pasta encontra-se todo o código fonte do sistema do lado do cliente (todos os aquivos referentes à página web se encontram na subpasta frontend).
 
-**README.md:** arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
 # 💻 Configuração para desenvolvimento
 Aqui encontram-se todas as instruções necessárias para a instalação de todos os programas, bibliotecas e ferramentas imprescindíveis para a configuração do ambiente de desenvolvimento.
