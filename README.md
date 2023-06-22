@@ -45,14 +45,6 @@ No geral, o projeto do WiseMeta tem como objetivo fornecer ao Banco Pan uma ferr
 
  **Principais funcionalidades:**
 
-➡️ Filtros avançados
-
-➡️ Ordenação de dados
-
-➡️ Criação de pastas para organização
-
-➡️ Capacidade de favoritar tabelas
-
 ➡️ Gerenciamento de alterações sugeridas (para perfis administrativos)
 
 ➡️ Solicitação de acesso a tabelas privadas
