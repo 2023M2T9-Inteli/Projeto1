@@ -39,7 +39,7 @@ A principal função dessa aplicação é fornecer uma plataforma avançada para
 
 A ferramenta de busca em banco de metadados do WiseMeta utiliza algoritmos sofisticados e técnicas de indexação avançadas para indexar e catalogar dados de maneira precisa e abrangente. Isso permite uma recuperação eficiente de informações, facilitando a localização de dados relevantes para os usuários.
 
-Além disso, a aplicação web coniste em uma interface intuitiva e amigável, tornando a ferramenta acessível a todos os usuários, independentemente de seu nível de conhecimento técnico.
+Além disso, a aplicação web consiste em uma interface intuitiva e amigável, tornando a ferramenta acessível a todos os usuários, independentemente de seu nível de conhecimento técnico.
 
 No geral, o projeto do WiseMeta tem como objetivo fornecer ao Banco Pan uma ferramenta de busca em banco de metadados inovadora, robusta e multifuncional, capaz de melhorar significativamente a usabilidade e eficiência do atual site de pesquisa de metadados.
 
