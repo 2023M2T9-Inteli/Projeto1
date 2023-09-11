@@ -116,8 +116,6 @@ cd .\src
 node .\app.js
 ```
 Agora você pode rodar o site localmente digitando na barra do seu navegador: http://localhost:3000/
-Você também pode acessar a aplicação através do link https://nc5pps-3000.csb.app/
-O servidor está online.
 
 # 🗃 Histórico de lançamentos
 0.1.0 - 28/04/2023
