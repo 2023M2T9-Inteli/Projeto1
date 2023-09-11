@@ -102,18 +102,21 @@ Aqui encontram-se todas as instruções necessárias para a instalação de todo
 <br>
 Baixar e instalar o node.js: https://nodejs.org/pt-br/ (versão 16.15.1 LTS)
 Clone o repositório em questão.
-No modo administrador, abra o "prompt de comando" ou o "terminal" e, após, abra a pasta "src" no diretório raiz do repositório clonado e digite o segundo comando:
+No modo administrador, abra o "prompt de comando" ou o "terminal" e digite os seguintes comandos:
 ```
-npm install
+npm install i
 ```
-Isso instalará todas as dependências definidas no arquivo package.json que são necessárias para rodar o projeto. Agora o projeto já está pronto para ser modificado. Caso ainda deseje iniciar a aplicação, digite o comando abaixo no terminal:
 ```
-npm start
+npm install dotenv
+```
+```
+cd .\src
+```
+```
+node .\app.js
 ```
 Agora você pode acessar a aplicação através do link https://nc5pps-3000.csb.app/
 O servidor está online.
-
-
 
 # 🗃 Histórico de lançamentos
 0.1.0 - 28/04/2023
